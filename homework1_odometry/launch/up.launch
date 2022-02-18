@@ -1,0 +1,15 @@
+<launch>
+    <node pkg="rb1" type="rb1_velocity" name="velocity_estimator"/>
+
+    <node pkg="rb1" type="rb1_odometry" name="odometry_estimator"/>
+    <node pkg="rb1" type="rb1_baseline" name="baseline_estimator" output="screen"/>
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="world_odom" args="0 0 0 0 0 0 1 world odom " />
+
+    <param name="pose/X" value="0.0"/>
+    <param name="pose/Y" value="0.0"/>
+    <param name="pose/Theta" value="0"/>
+
+    <param name="use_sim_time" value="true"/>
+
+</launch>

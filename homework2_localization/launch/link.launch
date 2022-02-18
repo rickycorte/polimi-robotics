@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="laser" args="0 0 0 0 0 0.707 0.707 camera_pose_frame laser" />
+
+</launch>
